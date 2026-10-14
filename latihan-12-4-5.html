@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan jQuery Checkbox</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#tombol").click(function() {
+                var hobi = [];
+
+                $("input[name='hobi']:checked").each(function() {
+                    hobi.push($(this).val());
+                });
+
+                alert(hobi.join(", "));
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <p>Pilih Hobi:</p>
+
+        <input type="checkbox" name="hobi" value="Membaca">
+        Membaca<br>
+
+        <input type="checkbox" name="hobi" value="Olahraga">
+        Olahraga<br>
+
+        <input type="checkbox" name="hobi" value="Musik">
+        Musik<br><br>
+
+        <button type="button" id="tombol">Ambil Nilai</button>
+    </form>
+</body>
+</html>

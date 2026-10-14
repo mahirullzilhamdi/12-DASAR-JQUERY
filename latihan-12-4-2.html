@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan jQuery html()</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#tombol").click(function() {
+                var nilai = $("#paragraf").html();
+                alert(nilai);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="paragraf">
+        Sedang belajar <em>jQuery</em> di <b>Duniailkom</b>.
+    </p>
+
+    <button id="tombol">Ambil Nilai</button>
+</body>
+</html>

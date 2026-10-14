@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+
+
+<script>
+$(document).ready(function() {
+    $("#hitung").click(function() {
+        let nilai1 = $("#angka1").val();
+        let nilai2 = $("#angka2").val();
+
+        if (nilai1 === "" || nilai2 === "") {
+            $("#hasil").text("Masukkan kedua angka!");
+            return;
+        }
+
+        let angka1 = parseFloat(nilai1);
+        let angka2 = parseFloat(nilai2);
+        let operator = $("#operator").val();
+        let hasil;
+
+        if (operator === "+") {
+            hasil = angka1 + angka2;
+        } else if (operator === "-") {
+            hasil = angka1 - angka2;
+        } else if (operator === "*") {
+            hasil = angka1 * angka2;
+        } else if (operator === "/") {
+            if (angka2 === 0) {
+                $("#hasil").text("Tidak bisa dibagi nol!");
+                return;
+            }
+            hasil = angka1 / angka2;
+        }
+
+        $("#hasil").text(hasil);
+    });
+});
+</script>
+
+
+
+<body>
+    <h2>Kalkulator Sederhana dengan jQuery</h2>
+
+    <input type="number" id="angka1" placeholder="Angka pertama">
+
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+    </select>
+
+    <input type="number" id="angka2" placeholder="Angka kedua">
+
+    <button id="hitung">Hitung</button>
+
+    <p>Hasil: <span id="hasil">-</span></p>
+</body>
+</html>

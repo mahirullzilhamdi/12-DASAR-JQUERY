@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan jQuery Select</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#tombol").click(function() {
+                var kota = $("#kota").val();
+                alert(kota);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="kota">Pilih Kota:</label>
+
+        <select id="kota">
+            <option value="jakarta">Jakarta</option>
+            <option value="bandung">Bandung</option>
+            <option value="bogor">Bogor</option>
+        </select>
+
+        <button type="button" id="tombol">Ambil Nilai</button>
+    </form>
+</body>
+</html>

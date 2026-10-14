@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan jQuery val()</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#tombol").click(function() {
+                var nama = $("#nama").val();
+                alert(nama);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="nama">Masukkan Nama:</label>
+        <input type="text" id="nama" value="Andika">
+
+        <button type="button" id="tombol">Ambil Nilai</button>
+    </form>
+</body>
+</html>
